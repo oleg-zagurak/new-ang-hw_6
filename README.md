@@ -3,8 +3,8 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2.
 
 # admin
-email admin@gmail.com
-password admin
+email: `admin@gmail.com`;
+password: admin
 
 ## Development server
 
