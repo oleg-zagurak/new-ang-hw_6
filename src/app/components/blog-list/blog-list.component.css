@@ -1,0 +1,63 @@
+.main {
+    width: 1120px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+.blog-card {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 15px 0;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: bold;
+}
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    color: rgb(145, 144, 144);
+}
+.host {
+    font-weight: bold;
+    color: #919090;
+
+}
+.date {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.post {
+    margin-bottom: 20px;
+}
+.btn-block {
+    text-align: right;
+}
+.btn {
+    font-size: 20px;
+    padding: 6px 10px;
+    border: none;
+}
+.btn:hover{
+    cursor: pointer;
+}
+.btn-edit {
+    background-color: rgb(232, 169, 11);
+    border-radius: 5px 0 0 5px;
+}
+.btn-edit:hover{
+    background-color: rgb(203, 151, 19);
+}
+
+.btn-del {
+    background-color: red;
+    border-radius: 0 5px 5px 0;
+    color: white;
+}
+.btn-del:hover{
+    background-color: rgb(203, 13, 13);
+}

@@ -1,0 +1,19 @@
+<div class="container" [ngClass]="opened ? 'open' : ''">
+    <div class="modal">
+        <div class="title-block">
+            <span>{{editable ? edit : add}}</span>
+            <a href="#" class="anc-close" (click)="closing()"><img src="./../../../assets/image/cross.svg" alt="close"></a>
+        </div>
+        <div class="form">
+            <label for="title">Title:</label>
+            <input type="text" id="title" [(ngModel)]="title" class="input">
+            <label for="password">Post:</label>
+            <textarea type="tex" id="password" [(ngModel)]="post" class="area input"></textarea>
+        </div>
+        <div class="btn-block">
+            <button class="btn close" (click)="closing()">Close</button>
+            <button class="btn submit" (click)="postBlog(true)" *ngIf="!editable">Post</button>
+            <button class="btn submit" (click)="postBlog(false)" *ngIf="editable">Edit Post</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<main class="main">
+    <div class="blog-card" *ngFor="let blog of blogs; let i = index;">
+        <div class="text">
+            <div class="title">{{blog.topic}}</div>
+            <div class="info">
+                <div class="host">Posted by: {{blog.postedBy}}</div>
+                <div class="date"><img src="./../../../assets/image/clock.svg" alt="clock"><span>{{blog.date}}</span></div>
+            </div>
+            <p class="post">{{blog.message}}</p>
+        </div>
+        <div class="btn-block" *ngIf="logged && isAdmin || logged && blog.postedBy === userName">
+            <button class="btn btn-edit" (click)="showModal(blog)">Edit</button>
+            <button class="btn btn-del" (click)="delete(i)">Delete</button>
+        </div>
+    </div>
+</main>
+<app-blog [opened]="editState" (close)="showModal()" [editable]="true"></app-blog>

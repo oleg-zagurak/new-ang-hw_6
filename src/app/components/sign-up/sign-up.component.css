@@ -1,0 +1,108 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transperent;
+    visibility: hidden;
+    transition: all .3s ease;
+}
+
+.container.open{
+    background-color: rgba(0, 0, 0, 0.496);
+    visibility: visible;
+}
+
+.modal{
+    width: 550px;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+    top: -500px;
+    transition: all .3s ease;
+}
+
+.container.open .modal{
+    top: 100px;
+    width: 600px;
+}
+
+.title-block{
+    padding: 20px 30px;
+    border-bottom: 2px solid lightgray;
+    font-size: 26px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.anc-close{
+    width: 22px;
+    height: 22px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.anc-close:hover{
+    background-color: rgb(232, 232, 232)
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 15px;
+    border-bottom: 2px solid lightgray;
+}
+
+.input{
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0 20px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.input:focus{
+    outline: none;
+    border-color: rgb(28, 168, 254);
+    box-shadow: 0px 0px 3px 3px rgba(28, 167, 254, 0.499);
+}
+.btn-block {
+    padding: 15px;
+    text-align: right;
+}
+
+.btn{
+    font-size: 20px;
+    padding: 10px 12px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
+.submit{
+    background-color: rgb(17, 62, 226);
+}
+
+.submit:hover{
+    background-color: rgb(42, 82, 228);
+}
+
+.close{
+    margin-right: 8px;
+    background-color: grey;
+}
+.close:hover{
+    background-color: rgb(148, 147, 147);
+}

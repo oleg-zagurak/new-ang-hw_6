@@ -1,0 +1,18 @@
+<header class="header">
+    <div class="title">Angular Blog</div>
+    <div class="auth">
+        <ng-container *ngIf="!logged">
+            <button class="btn in" (click)="showModal(true)">Sign In</button>
+            <button class="btn up" (click)="showModal(false)">Sign Up</button>
+        </ng-container>
+        <ng-container *ngIf="logged">
+            <button class="btn in" (click)="showModal()">Add post</button>
+            <span class="user">{{currentUserName}}</span>
+            <button class="btn out" (click)="logOut()">Sign out</button>
+        </ng-container>
+    </div>
+</header>
+
+<app-sign-in [opened]="inState" (close)="showModal(true)"></app-sign-in>
+<app-sign-up [opened]="upState" (close)="showModal(false)"></app-sign-up>
+<app-blog [opened]="addState" (close)="showModal()"></app-blog>

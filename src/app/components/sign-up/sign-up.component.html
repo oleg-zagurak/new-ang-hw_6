@@ -1,0 +1,20 @@
+<div class="container" [ngClass]="opened ? 'open' : ''">
+    <div class="modal">
+        <div class="title-block">
+            <span>Sign Up</span>
+            <a href="#" class="anc-close" (click)="closing()"><img src="./../../../assets/image/cross.svg" alt="close"></a>
+        </div>
+        <div class="form">
+            <label for="username">User name:</label>
+            <input type="text" id="username" class="input" [(ngModel)]="name">
+            <label for="email">Email:</label>
+            <input type="text" id="email" class="input" [(ngModel)]="email">
+            <label for="password">Password:</label>
+            <input type="text" id="password" class="input"[(ngModel)]="password">
+        </div>
+        <div class="btn-block">
+            <button class="btn close" (click)="closing()">Close</button>
+            <button class="btn submit" (click)="register()">Submit</button>
+        </div>
+    </div>
+</div>
